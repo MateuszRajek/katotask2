@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import SearchingBar from './Components/SearchingBar';
+import SearchingBar from './Components/SearchingBar/SearchingBar';
+import Weather from './Components/Weather/Weather';
 import './App.css';
-import Weather from './Components/Weather';
 
 function App() {
-  const [weatherInfo, setWeatherInfo] = useState('')
+  const [weatherInfo, setWeatherInfo] = useState("")
+
 
 
   return (
-    <div className="App">
+    <div className="container">
       <h1>Weather App</h1>
       <SearchingBar setWeatherInfo={setWeatherInfo} />
       <Weather weatherInfo={weatherInfo} />

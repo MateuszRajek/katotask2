@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { getWeatherInfo } from '../requests';
+import { getWeatherInfo } from '../../../src/requests';
+import './SearchingBar.css'
 
 function SearchingBar({ setWeatherInfo }) {
   const [cityName, setCityName] = useState('');
@@ -11,7 +12,6 @@ function SearchingBar({ setWeatherInfo }) {
   const getAndRenderWeatherInfo = () => {
     getWeatherInfo(cityName)
     .then(resp => {
-      console.log(resp)
       const { list } = resp.data;
         setWeatherInfo(list)   
   })}
@@ -19,8 +19,8 @@ function SearchingBar({ setWeatherInfo }) {
   return (
     <div className="searching-bar">
       <p>Please choose the city from the list to get the wether forecast</p>
-      <select defaultValue="Choose the City" onChange={updateCity}>
-        <option  disabled="disabled">Choose the City</option>
+      <select className="searching-bar__select" defaultValue="Choose the City" onChange={updateCity}>
+        <option disabled="disabled">Choose the City</option>
         <option>London</option>
         <option>München</option>
       </select>

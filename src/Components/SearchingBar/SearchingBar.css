@@ -1,0 +1,40 @@
+.searching-bar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.searching-bar p {
+    font-size: 20px;
+}
+
+.searching-bar__select {
+    align-self: center;
+    width: 70%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    font-size: 26px;
+    border-radius: 10px;
+}
+
+.searching-bar__select option {
+    font-size: 18px
+}
+
+.searching-bar button {
+    align-self: center;
+    padding: 10px 15px;
+    border: 1px solid #7ad7f0;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #40acca;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.searching-bar button:hover {
+    background-color: #7ad7f0;
+    color: white;
+}

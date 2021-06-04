@@ -1,0 +1,11 @@
+.weather-info {
+    width: 100%;
+}
+
+.weather-info__score, .weather-info__titles {
+    text-align: center;
+}
+
+.weather-info__score:nth-of-type(2n) {
+    background-color: #dbf3fa
+}
