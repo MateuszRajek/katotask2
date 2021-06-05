@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import SearchingBar from './Components/SearchingBar/SearchingBar';
 import Weather from './Components/Weather/Weather';
-import './App.css';
 import { getWeatherInfo } from './requests';
+import './App.css';
 
 function App() {
   const [cityName, setCityName] = useState("");
