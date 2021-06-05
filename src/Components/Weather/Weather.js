@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Weather.css'
 
-function Weather({ weatherInfo }) {
+function Weather({ weatherInfo, intervalSetup }) {
 
+  useEffect(intervalSetup, []);
 
   return (
     weatherInfo && <div className="weather-info">
@@ -16,7 +17,7 @@ function Weather({ weatherInfo }) {
         </tr>
       </thead>
       <tbody>
-      {weatherInfo.map(item => {
+      {weatherInfo && weatherInfo.map(item => {
           const date = item.dt_txt.split(" ")[0];
           const time = item.dt_txt.split(" ")[1];
           const humidity = `${item.main.humidity}%`;

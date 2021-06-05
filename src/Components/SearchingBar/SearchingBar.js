@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
-import { getWeatherInfo } from '../../../src/requests';
-import './SearchingBar.css'
+import React from 'react';
+import './SearchingBar.css';
 
-function SearchingBar({ setWeatherInfo }) {
-  const [cityName, setCityName] = useState('');
+function SearchingBar({ setCityName, onClick }) {
 
   const updateCity = ({target : {value}}) => {
-    setCityName(value)
+    setCityName(value);
   }
- 
-  const getAndRenderWeatherInfo = () => {
-    getWeatherInfo(cityName)
-    .then(resp => {
-      const { list } = resp.data;
-        setWeatherInfo(list)   
-  })}
 
   return (
     <div className="searching-bar">
@@ -24,7 +15,7 @@ function SearchingBar({ setWeatherInfo }) {
         <option>London</option>
         <option>München</option>
       </select>
-      <button onClick={getAndRenderWeatherInfo}>Get weather info</button>
+      <button onClick={onClick}>Get weather info</button>
     </div>
   );
 }
