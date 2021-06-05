@@ -23,11 +23,13 @@ function App() {
   };
 
   const getAndRenderWeatherInfo = () => {
+    cityName === '' ? alert('Please choose the city from the list') : 
     getWeatherInfo(cityName)
     .then(resp => {
       const { list } = resp.data;
         setWeatherInfo(list);
-  })};
+  })
+.catch(error => alert(error))};
 
   return (
     <div className="container">
