@@ -33,7 +33,7 @@ function App() {
     <div className="container">
       <h1>Weather App</h1>
       <SearchingBar setCityName={setCityName} onClick={getAndRenderWeatherInfo} />
-     { weatherInfo && <Weather weatherInfo={weatherInfo} intervalSetup={intervalSetup} cityName={cityName} />}
+     {weatherInfo && <Weather weatherInfo={weatherInfo} intervalSetup={intervalSetup} cityName={cityName} />}
     </div>
   );
 }
