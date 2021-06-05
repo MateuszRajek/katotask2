@@ -3,7 +3,7 @@ import './Weather.css'
 
 function Weather({ weatherInfo, intervalSetup }) {
 
-  useEffect(intervalSetup, []);
+  useEffect(intervalSetup, [weatherInfo]);
 
   return (
     weatherInfo && <div className="weather-info">
